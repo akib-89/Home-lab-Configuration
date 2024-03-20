@@ -1,0 +1,13 @@
+data
+
+# db conf
+
+postgres*
+
+# redis conf
+
+redis
+
+# secrets
+
+.secrets

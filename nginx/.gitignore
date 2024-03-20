@@ -1,0 +1,5 @@
+# files for ssl certificate and key
+letsencrypt*
+
+# persistant data for the proxy manager
+data*

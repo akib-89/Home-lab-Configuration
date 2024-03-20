@@ -1,0 +1,57 @@
+version: '3.9'
+services:
+  pihole:
+    container_name: pihole
+    image: pihole/pihole:latest # <- update image version here, see: https://github.com/pi-hole/docker-pi-hole/releases
+    hostname: pihole
+    # user: ${DOCKER_USER}
+    restart: unless-stopped
+    depends_on:
+      - unbound
+    ports:
+      - '8080:80/tcp' # web ui -> http://localhost:8080/admin
+      - '53:53/tcp' # DNS tcp port is used as fallback for longer dns messages
+      - '53:53/udp' # DNS port
+    # RECOMMENDED: Uncomment and adapt if you want to persist pihole configurations after restart
+    volumes:
+      - ./etc-pihole:/etc/pihole/
+      - ./etc-dnsmasq.d:/etc/dnsmasq.d/
+    environment:
+      WEBPASSWORD: ${WEBPASSWORD}
+      TZ: ${TIMEZONE}
+      PIHOLE_DNS_: 172.21.200.3#53 # forward to unbound
+      DNSSEC: true
+    dns:
+      - 127.0.0.1
+      - 9.9.9.9 # Quad9
+      - 1.1.1.1 # CloudFlare
+    networks:
+      pihole_dns_network:
+        ipv4_address: 172.21.200.2 # <-- use this ip as dns when connected to pihole_dns_network (i.e. within a docker network)
+  unbound:
+    container_name: unbound
+    image: mvance/unbound:latest
+    hostname: unbound
+    # user: ${DOCKER_USER}
+    restart: unless-stopped
+    ports:
+      - '5335:53/tcp' # expose a different port (5335) so you can use it directly
+      - '5335:53/udp'
+    networks:
+      pihole_dns_network:
+        ipv4_address: 172.21.200.3 # <-- this is used by pihole as upstream DNS
+    #  todo: add volume to persist unbound configuration and logs
+    #  currently unbound is not configured to persist data
+    # volumes:
+    #   - "./unbound:/opt/unbound/etc/unbound"
+
+networks:
+  # Define a custom subnet for pihole so that unbound can be an upstream DNS on port 53
+  pihole_dns_network:
+    name: "pihole_dns_network"
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.21.200.0/24
+          gateway: 172.21.200.1
+          ip_range: 172.21.200.0/24 # 172.21.200.1 - 172.21.200.254
