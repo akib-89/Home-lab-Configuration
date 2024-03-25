@@ -1,0 +1,36 @@
+.bookmark-group {
+    width: 0.25vw;
+}
+
+.bookmark-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.bookmark {
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.bookmark-text {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bookmark-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.bookmark-description {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1rem;
+    word-wrap: break-word;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}

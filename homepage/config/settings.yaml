@@ -18,18 +18,26 @@ favicon: images/favicon.ico
 
 theme: dark # dark, light
 
-color: cyan # slate, gray, teal, cyan, sky, blue, indigo, violet, purple, fuchsia, pink, rose, red, white
+color: slate # slate, gray, teal, cyan, sky, blue, indigo, violet, purple, fuchsia, pink, rose, red, white
 
 layout:
   # Layout options: row, column
   DNS With Proxy:
     icon: azure-dns
-    style: column
-    rows: 2
+    style: row
+    columns: 3
   Media Stack:
     icon: universal-media-server
+    style: row
+    columns: 3
+  Important:
     style: column
-    rows: 1
+  Developer:
+    style: column
+  Social:
+    style: column
+  Entertainment:
+    style: column
 
 quicklaunch:
   searchDescriptions: true      # Item descriptions are in search context, default false
