@@ -21,16 +21,21 @@ theme: dark # dark, light
 color: cyan # slate, gray, teal, cyan, sky, blue, indigo, violet, purple, fuchsia, pink, rose, red, white
 
 layout:
+  # Layout options: row, column
   DNS With Proxy:
     icon: azure-dns
-    style: row
-    columns: 2
+    style: column
+    rows: 2
+  Media Stack:
+    icon: universal-media-server
+    style: column
+    rows: 1
 
 quicklaunch:
-  searchDescriptions: true
-  hideInternetSearch: true
-  showSearchSuggestions: true
-  hideVisitURL: true
+  searchDescriptions: true      # Item descriptions are in search context, default false
+  hideInternetSearch: false     # Allow searching the internet, default false
+  showSearchSuggestions: true   # Show search suggestions, default false
+  hideVisitURL: true            # disable the visit URL button, default false
 
 providers:
   openweathermap: openweathermapapikey

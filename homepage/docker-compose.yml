@@ -22,6 +22,7 @@ services:
     volumes:
       - config:/app/config
       - images:/app/public/images
+      - icons:/app/public/icons
       - /var/run/docker.sock:/var/run/docker.sock:ro # optional, for docker integrations
     networks:
       pihole_dns_network:               # This is done for so that the container can resolve the DNS
@@ -39,6 +40,12 @@ volumes:
     driver_opts:
       type: none
       device: ./images
+      o: bind
+  icons:
+    driver: local
+    driver_opts:
+      type: none
+      device: ./icons
       o: bind
 
 networks:

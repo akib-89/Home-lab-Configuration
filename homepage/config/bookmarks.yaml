@@ -4,15 +4,51 @@
 
 - Developer:
     - Github:
-        - abbr: GH
+        - icon: github
           href: https://github.com/
+          description: Code hosting platform
+    - Stack Overflow:
+        - icon: /icons/stackoverflow.svg
+          href: https://stackoverflow.com/
+          description: Q&A for professional and enthusiast programmers
+    - ChatGPT:
+        - icon: openai
+          href: https://chat.openai.com/
+          description: Chat with GPT-3
 
 - Social:
     - Reddit:
-        - abbr: RE
+        - icon: reddit
           href: https://reddit.com/
+          description: Social news aggregation, web content rating, and discussion website
+    - Twitter:
+        - icon: twitter
+          href: https://twitter.com/
+          description: Social networking and microblogging service
+    - Instagram:
+        - icon: instagram
+          href: https://instagram.com/
+          description: Photo and video sharing social networking service
+    - Facebook:
+        - icon: facebook
+          href: https://facebook.com/
+          description: Social networking service
 
 - Entertainment:
     - YouTube:
-        - abbr: YT
+        - icon: youtube
           href: https://youtube.com/
+
+- Important:
+    - Gmail:
+        - icon: gmail
+          href: https://mail.google.com/
+          description: Email service
+    - Google Drive:
+        - icon: google-drive
+          href: https://drive.google.com/
+          description: File storage and synchronization service
+    - Moodle:
+        - icon: moodle
+          href: https://moodle.cse.buet.ac.bd
+          description: Learning platform
