@@ -2,17 +2,40 @@
 # For configuration options and examples, please see:
 # https://gethomepage.dev/latest/configs/services
 
-- My First Group:
-    - My First Service:
-        href: http://localhost/
-        description: Homepage is awesome
+- Media Stack:
+    - Jellyfin:
+        icon: jellyfin
+        href: https://jellyfin.akib.duckdns.org
+        description: Movies & TV Shows
+        # ping: https://jellyfin.akib.duckdns.org
+        siteMonitor: https://jellyfin.akib.duckdns.org
+        widget:
+            type: jellyfin
+            url: https://jellyfin.akib.duckdns.org
+            key: {{HOMEPAGE_FILE_JELLYFIN_KEY}}
+            enableBlocks: true # optional, defaults to false
+            enableNowPlaying: false # optional, defaults to true
 
-- My Second Group:
-    - My Second Service:
-        href: http://localhost/
-        description: Homepage is the best
 
-- My Third Group:
-    - My Third Service:
-        href: http://localhost/
-        description: Homepage is 😎
+- DNS With Proxy:
+    - Pi-hole:
+        icon: pi-hole
+        href: https://pi-hole.akib.duckdns.org/admin
+        description: Network-wide Ad Blocking
+        # ping: https://pi-hole.akib.duckdns.org
+        siteMonitor: https://pi-hole.akib.duckdns.org
+        widget:
+            type: pihole
+            url: https://pi-hole.akib.duckdns.org
+            key: {{HOMEPAGE_FILE_PIHOLE_KEY}}
+    - Nginx Proxy Manager:
+        icon: nginx
+        href: https://proxy-manager.akib.duckdns.org
+        description: Reverse Proxy
+        # ping: https://proxy-manager.akib.duckdns.org
+        siteMonitor: https://proxy-manager.akib.duckdns.org
+        widget:
+            type: npm
+            url: https://proxy-manager.akib.duckdns.org
+            username: {{HOMEPAGE_FILE_NGINX_USERNAME}}
+            password: {{HOMEPAGE_FILE_NGINX_PASSWORD}}

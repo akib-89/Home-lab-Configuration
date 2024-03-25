@@ -1,4 +1,5 @@
 .env
+.secrets
 
 config/docker.yaml
 config/kubernetes.yaml

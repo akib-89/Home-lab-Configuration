@@ -8,13 +8,29 @@ title: Welcome to Homepage
 
 # Background image
 background:
-  image: /images/background.png
-  blur: sm # sm, "", md, xl... see https://tailwindcss.com/docs/backdrop-blur
-  saturate: 50 # 0, 50, 100... see https://tailwindcss.com/docs/backdrop-saturate
-  brightness: 50 # 0, 50, 75... see https://tailwindcss.com/docs/backdrop-brightness
-  opacity: 50 # 0-100
+  image: images/background-1.jpg
+  brightness: 5 # 0, 50, 75... see https://tailwindcss.com/docs/backdrop-brightness
+  opacity: 15 # 0-100
 
+cardBlur: sm 
 
+favicon: images/favicon.ico
+
+theme: dark # dark, light
+
+color: cyan # slate, gray, teal, cyan, sky, blue, indigo, violet, purple, fuchsia, pink, rose, red, white
+
+layout:
+  DNS With Proxy:
+    icon: azure-dns
+    style: row
+    columns: 2
+
+quicklaunch:
+  searchDescriptions: true
+  hideInternetSearch: true
+  showSearchSuggestions: true
+  hideVisitURL: true
 
 providers:
   openweathermap: openweathermapapikey
