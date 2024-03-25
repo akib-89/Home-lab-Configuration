@@ -39,6 +39,10 @@ layout:
   Entertainment:
     style: column
 
+# change the target type to _self
+target: _self   # _blank: open in new tab, _self: open in same tab, _top: open in full body of window
+
+# Quicklaunch items
 quicklaunch:
   searchDescriptions: true      # Item descriptions are in search context, default false
   hideInternetSearch: false     # Allow searching the internet, default false
