@@ -3,12 +3,12 @@
 }
 
 .bookmark-list {
-    display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
 
 .bookmark {
+    width: 150px;
+    height: fit-content;
     border-radius: 5px;
     padding: 10px;
     display: flex;
@@ -32,6 +32,7 @@
 .bookmark-name {
     font-size: 1.5rem;
     font-weight: bold;
+    text-align: center;
 }
 
 .bookmark-icon {
@@ -45,7 +46,7 @@
 }
 
 .bookmark-description {
-    max-width: 200px;
+    max-width: 100px;
     text-align: center;
     font-size: 1rem;
     word-wrap: break-word;

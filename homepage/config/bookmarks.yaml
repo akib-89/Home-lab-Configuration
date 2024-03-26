@@ -6,29 +6,29 @@
     - Github:
         - icon: github
           href: https://github.com/
-          description: Code hosting platform
+          description: Code hosting
     - Stack Overflow:
         - icon: /icons/stackoverflow.svg
           href: https://stackoverflow.com/
-          description: Q&A for professional and enthusiast programmers
+          description: Q&A for programmers
     - ChatGPT:
         - icon: openai
           href: https://chat.openai.com/
           description: Chat with GPT-3
 
 - Social:
-    - Reddit:
-        - icon: reddit
-          href: https://reddit.com/
-          description: Social news aggregation, web content rating, and discussion website
+    - LinkedIn:
+        - icon: linkedin
+          href: https://linkedin.com/
+          description: Professional networking service
     - Twitter:
         - icon: twitter
           href: https://twitter.com/
-          description: Social networking and microblogging service
-    - Instagram:
-        - icon: instagram
-          href: https://instagram.com/
-          description: Photo and video sharing social networking service
+          description: Microblogging
+    - Reddit:
+        - icon: reddit
+          href: https://reddit.com/
+          description: Discussion website
     - Facebook:
         - icon: facebook
           href: https://facebook.com/
@@ -38,6 +38,11 @@
     - YouTube:
         - icon: youtube
           href: https://youtube.com/
+          description: Video sharing platform
+    - Instagram:
+        - icon: instagram
+          href: https://instagram.com/
+          description: Photo and video sharing social networking service
 
 - Important:
     - Gmail:
@@ -52,3 +57,7 @@
         - icon: moodle
           href: https://moodle.cse.buet.ac.bd
           description: Learning platform
+    - Messenger:
+        - icon: facebook-messenger
+          href: https://messenger.com/
+          description: Messaging service
