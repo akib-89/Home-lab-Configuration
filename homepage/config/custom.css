@@ -11,10 +11,20 @@
 .bookmark {
     border-radius: 5px;
     padding: 10px;
+    display: flex;
+}
+
+.bookmark-container {
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
 }
 
 .bookmark-text {
-    width: 100%;
+    display: flex;
+    flex-grow: 0;
+    max-width: none;
+    white-space: wrap;
     flex-direction: column;
     justify-content: center;
 }
@@ -24,13 +34,20 @@
     font-weight: bold;
 }
 
+.bookmark-icon {
+    display: flex;
+}
+
+.bookmark-icon-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .bookmark-description {
-    width: 80%;
-    margin: 0 auto;
+    max-width: 200px;
     text-align: center;
     font-size: 1rem;
     word-wrap: break-word;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
+    white-space: wrap
 }
