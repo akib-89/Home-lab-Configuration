@@ -43,6 +43,10 @@
         - icon: instagram
           href: https://instagram.com/
           description: Photo and video sharing social networking service
+    - Torrentbd:
+        - icon: webtorrent
+          href: https://torrentbd.net/
+          description: Bangladeshi torrent site
 
 - Important:
     - Gmail:
@@ -57,7 +61,17 @@
         - icon: moodle
           href: https://moodle.cse.buet.ac.bd
           description: Learning platform
+
+- Messaging:
     - Messenger:
         - icon: facebook-messenger
           href: https://messenger.com/
+          description: Messaging service
+    - Slack:
+        - icon: slack
+          href: https://slack.com/
+          description: Business communication platform
+    - WhatsApp:
+        - icon: whatsapp
+          href: https://web.whatsapp.com/
           description: Messaging service

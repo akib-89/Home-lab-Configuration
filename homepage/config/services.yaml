@@ -5,16 +5,29 @@
 - Media Stack:
     - Jellyfin:
         icon: jellyfin
-        href: https://jellyfin.akib.duckdns.org
+        href: https://seedbox.akib.duckdns.org
         description: Movies & TV Shows
         # ping: https://jellyfin.akib.duckdns.org
-        siteMonitor: https://jellyfin.akib.duckdns.org
+        siteMonitor: https://seedbox.akib.duckdns.org
         widget:
             type: jellyfin
-            url: https://jellyfin.akib.duckdns.org
+            url: https://seedbox.akib.duckdns.org
             key: {{HOMEPAGE_FILE_JELLYFIN_KEY}}
             enableBlocks: true # optional, defaults to false
             enableNowPlaying: false # optional, defaults to true
+    
+    - Qbittorrent:
+        icon: qbittorrent
+        href: https://torrent.akib.duckdns.org
+        description: Torrent Client
+        # ping: https://qbittorrent.akib.duckdns.org
+        siteMonitor: https://torrent.akib.duckdns.org
+        # widget:
+        #     type: qbittorrent
+        #     url: https://torrent.akib.duckdns.org
+        #     username: {{HOMEPAGE_FILE_QBITTORRENT_USERNAME}}
+        #     password: {{HOMEPAGE_FILE_QBITTORRENT_PASSWORD}}
+
 
 
 - DNS With Proxy:

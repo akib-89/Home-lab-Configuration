@@ -12,6 +12,8 @@ services:
       - HOMEPAGE_FILE_JELLYFIN_KEY=/run/secrets/jellyfin_api
       - HOMEPAGE_FILE_NGINX_USERNAME=/run/secrets/nginx_username
       - HOMEPAGE_FILE_NGINX_PASSWORD=/run/secrets/nginx_password
+      - HOMEPAGE_FILE_QBITTORRENT_USERNAME=/run/secrets/qbittorrent_username
+      - HOMEPAGE_FILE_QBITTORRENT_PASSWORD=/run/secrets/qbittorrent_password
     secrets:
       - pihole_api
       - jellyfin_api
@@ -26,6 +28,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock:ro # optional, for docker integrations
     networks:
       pihole_dns_network:               # This is done for so that the container can resolve the DNS
+        ipv4_address: 172.21.200.4
     
 
 volumes:
@@ -64,3 +67,7 @@ secrets:
     file: ./.secrets/nginx_username
   nginx_password:
     file: ./.secrets/nginx_password
+  qbittorrent_username:
+    file: ./.secrets/qbittorrent_username
+  qbittorrent_password:
+    file: ./.secrets/qbittorrent_password
