@@ -4,7 +4,9 @@ services:
     container_name: nginx-proxy-manager
     image: 'jc21/nginx-proxy-manager:latest'
     restart: unless-stopped
-    # user: ${DOCKER_USER}
+    networks:
+      proxy:
+        ipv4_address: 172.21.200.10
     ports:
       - '80:80'
       - '8050:81'
@@ -12,3 +14,9 @@ services:
     volumes:
       - ./data:/data
       - ./letsencrypt:/etc/letsencrypt
+
+
+networks:
+  proxy:
+    name: "pihole_dns_network"
+    external: true
