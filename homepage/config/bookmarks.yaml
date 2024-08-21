@@ -67,10 +67,14 @@
         - icon: facebook-messenger
           href: https://messenger.com/
           description: Messaging service
-    - Slack:
-        - icon: slack
-          href: https://slack.com/
-          description: Business communication platform
+    - English-Mattermost:
+        - icon: mattermost
+          href: https://mattermost-pridesys.eastus.cloudapp.azure.com/
+          description: Messaging service
+    - Bangla-Mattermost:
+        - icon: mattermost
+          href: https://mattermost.pridesys.duckdns.org/
+          description: Messaging service
     - WhatsApp:
         - icon: whatsapp
           href: https://web.whatsapp.com/
